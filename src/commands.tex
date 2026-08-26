@@ -1,0 +1,44 @@
+\usepackage[
+    top=0.55in,
+    bottom=0.55in,
+    left=0.65in,
+    right=0.65in
+]{geometry}
+
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\setmainfont{Latin Modern Sans}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\setlist[itemize]{
+    leftmargin=*,
+    nosep
+}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+\titleformat{\section}
+    {\large\bfseries}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}
+    {0pt}
+    {8pt}
+    {4pt}
