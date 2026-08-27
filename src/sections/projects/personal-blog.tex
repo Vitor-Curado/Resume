@@ -1,9 +1,29 @@
-\textbf{Personal blog} \hfill \textit{Rust, TypeScript, React, PostgreSQL, Docker, GitHub Actions, AWS EC2, AWS S3, GHCR}
+\textbf{Personal blog}
+\hfill
+\textit{\small Rust, TypeScript, React, PostgreSQL, Docker, GitHub Actions, AWS}
 
 \begin{itemize}
-    \item Designed and developed a server-rendered personal publishing platform in Rust, separating request handling, application logic, persistence, and presentation into modular components.
-    \item Implemented asynchronous request handling and database-backed content management with PostgreSQL, designing application interfaces around clear separation of concerns and predictable error handling.
-    \item Developed the frontend using TypeScript and React while gradually transitioning the application from server-rendered pages toward a client-rendered architecture to reduce server-side workload and hosting costs.
-    \item Containerized the application with Docker and established a CI/CD pipeline using GitHub Actions to build, test, publish, and deploy reproducible application images through GitHub Container Registry.
-    \item Deployed the application to AWS EC2 and integrated Amazon S3 for persistent object storage, separating application infrastructure from user-uploaded and static assets.
+    % Rust
+    \item Migrated the application from Python to Rust after the original Gunicorn deployment exceeded the available memory of a 0.5 GB environment, enabling the service to run within the existing resource constraints.
+
+    % PostgreSQL
+    \item Designed a PostgreSQL-backed persistence layer for storing blog content and application data, separating database access from request handling and presentation logic.
+
+    % Podman/docker
+    \item Containerized the application and supporting services, using a Compose-based environment to coordinate the application binary, PostgreSQL, Prometheus, and Grafana.
+
+    % AWS
+    \item Deployed the containerized application on an AWS EC2 instance, configuring the production environment to run the application alongside its supporting services.
+
+    % GHCR
+    \item Replaced manual production compilation with prebuilt Rust artifacts published through GitHub Container Registry, moving compilation off the production server and reducing deployment build time from several minutes to under a minute. 
+
+    % Prometheus & Grafana
+    \item Instrumented application and infrastructure metrics with Prometheus and Grafana to monitor service health, resource usage, and application performance.
+    
+    % Nginx
+    \item Configured Nginx as a reverse proxy to expose the application through a controlled production entry point.
+    
+    % SSR => CSR
+    %\item Reworked the frontend from server-rendered templates toward a React and TypeScript client architecture, reducing server-side rendering work while preserving the existing Rust backend API.
 \end{itemize}
