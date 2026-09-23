@@ -1,8 +1,34 @@
 \section{Projects}
 
-\input{sections/projects/personal-blog.tex}
-%\input{sections/projects/static-webpage.tex}
-%\input{sections/projects/desktop-financial-application.tex}
-%\input{sections/projects/password-manager.tex}
-\input{sections/projects/minecraft-server.tex}
-\input{sections/projects/video-game.tex}
+\textbf{ Personal blog \& CMS }
+\hfill
+\textit{\small Rust, TypeScript, Vite, PostgreSQL, Podman, AWS EC2}
+
+\begin{itemize}
+    % Full stack
+    \item Developed a full-stack application using Rust, TypeScript and PostgreSQL, in-house CSS and HTML templates to make an SSR-first blog with sessions-based CMS to store persistent user data (blog posts in markdown).
+    
+    % AWS
+    \item Deployed the containerized application on an ARM64 RHEL 10 AWS EC2 instance and configured systemd for service management and automatic startup.
+    
+    % Podman/docker
+    \item Containerized the application with Podman and published prebuilt ARM64 images to GitHub Container Registry, moving Rust compilation off the production server and reducing deployment build time from several minutes to under a minute.
+
+    % PostgreSQL
+    \item Implemented a PostgreSQL-backed persistence layer for Markdown blog content, allowing the CMS to create, read, update, and delete (CRUD) posts as persistent application data.
+    
+    % Vite as static asset manager and generator
+    \item Configured Vite to fingerprint, cache-bust, minify and merge static frontend assets for production environment, improving browser caching and reducing overall assets served by the application.
+
+    % Prometheus & Grafana
+    \item Implemented application and infrastructure metrics with Prometheus, VictoriaMetrics and Grafana to monitor service health, resource usage, and application performance.
+    
+    % Benchmarking
+    \item Benchmarked application performance with wrk, measuring p99 latency and behavior under load.
+    
+    % Nginx
+    \item Configured Nginx as a reverse proxy to provide a controlled public entry point and implemented HTTP request rate limiting to limit abusive traffic reaching the application.
+    
+    % SSG
+    \item Generated static endpoints at compile time, reducing runtime compute and application workload. 
+\end{itemize}
