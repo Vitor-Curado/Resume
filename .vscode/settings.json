@@ -1,5 +1,6 @@
 {
-    "latex-workshop.latex.outDir": "%DIR%/../build",
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/resumes",
+    "latex-workshop.latex.auxDir": "%WORKSPACE_FOLDER%/build",
     "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
     "latex-workshop.latex.recipes": [
         {
@@ -18,6 +19,7 @@
                 "-interaction=nonstopmode",
                 "-synctex=1",
                 "-outdir=%OUTDIR%",
+                "-auxdir=%WORKSPACE_FOLDER%/build",
                 "%DOC%"
             ]
         }

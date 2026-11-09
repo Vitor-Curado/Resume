@@ -1,0 +1,1 @@
+tree; cat src/common/additional-information.tex; cat src/common/commands.tex; cat src/common/education.tex; cat src/common/footer.tex; cat src/common/header.tex; cat src/experience/swd.tex; cat src/projects/swd.tex; cat src/resumes/base.tex; cat src/resumes/vitor-swd.tex; cat src/skills/swd.tex; cat src/summaries/swd.tex;

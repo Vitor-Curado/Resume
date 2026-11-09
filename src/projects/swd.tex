@@ -1,0 +1,16 @@
+\section{Projects}
+
+\href{https://github.com/Vitor-Curado/BuildHaven/}{\textbf{Personal blog \& CMS}}  
+\hfill
+\textit{\small Rust, TypeScript, PostgreSQL, AWS}
+
+\begin{itemize}
+    \item A full-stack web application with the backend written in Rust, with both SSG pages built at compile time, offloading compute from prod, and dynamic SSR with added interactivity at compile time
+    \item Deployed in an AWS Linux, ARM64 (Graviton) AWS EC2 instance, prod receives the latest binary from GHCR, thus moving the concern away from prod to CI. 
+    \item Prod is managed with Podman Quadlets, a more sophisticated way than a monolith systemd module, while for local development podman-compose may be utilised.
+    \item The server is behind a Nginx reverse proxy with configured rate limit at the application layer
+    \item Session-based authentication with passwords hashed using Argon2. Following security best practices, mindful of CSPs
+    \item Using Prometheus, Grafana and VictoriaMetrics to observe latency (p50, p99), traffic (req/s), resources (RAM, CPU) and errors (5xx are server-related, 4xx are client-related)
+    \item Handles technical SEO including page metadata, canonical URLs, robots.txt, page titles and dynamic sitemap generation
+    \item Currently exploring terraform and DB backup strategies
+\end{itemize}
